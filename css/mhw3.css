@@ -1,0 +1,372 @@
+html{
+    background-color: black;
+    font-family: "Shippori Mincho";
+    color:ghostwhite ;
+}
+
+div::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #121212;
+}
+
+div::-webkit-scrollbar{
+	width: 12px;
+	background-color: #121212;
+}
+
+div::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #F5F5F5;
+}
+
+body {
+    margin: 0px;
+}
+
+div {
+    border-radius: 10px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.flex{
+    display: flex;
+    height: 85%;
+    margin-bottom: 5px;
+}
+  
+.flex-left{
+    display: flex;
+    width: 28%;
+    flex-direction: column;
+    margin-right: 12px;
+}
+
+.flex-right{
+    display: flex;
+    width: 72%;
+}
+
+.flex-search, .flex-home{
+    display: flex;
+}
+
+.home-search{
+    height: 20%;
+    width: 100%;
+    background-color:#121212;
+    opacity: 0.8;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.home-search img, .icon{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+}
+
+.icon-dx{
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+}
+
+.home-search span, .library span{
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.overlay{
+    display: none;
+    font-size: 13px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    padding: 2px;
+    border-radius: 0px;
+    background-color:#414141;
+}
+
+.container:hover .overlay{
+    display: block;
+}
+
+
+.link, .link-list{
+    text-decoration: none;
+    transition: font-size 0.3s, font-weight 0.3s;
+    color: white;
+}
+
+.link:hover{
+    font-weight: bolder;
+}
+
+.link-list:hover {
+    opacity: 0.7;
+}
+
+.library {
+    font-size: 18px;
+    height: 72%;
+    width: 100%;
+    background-color:#121212;
+    opacity: 0.8;
+}
+
+.flex-library, .flex-search-library {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0px;
+}
+
+.button-playlist-artist, .button-playlist-artist-current {    
+    text-decoration: none;
+    transition: font-size 0.3s, font-weight 0.3s;
+    background-color: #414141;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder; 
+    border-radius: 10px;
+    padding: 7px 12px;
+}
+
+.button-playlist-artist-current{    
+    background-color: white;
+    color: #414141;
+}
+
+.button-playlist-artist{    
+    color: white;
+    background-color: #414141;
+}
+
+.button-playlist-artist:hover {
+    opacity: 0.6;
+}
+
+.img-list-playlist, .img-list-artist  {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.img-list-artist {
+    border-radius: 50%;
+}
+
+.img-list-playlist {
+    border-radius: 2px;
+}
+
+.flex-list-playlist-artist {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    overflow-y: auto;
+}
+
+.flex-list-playlist-artist div{
+    margin-top:10px;
+    margin-bottom:10px;
+    vertical-align: middle;
+}
+
+.flex-list-playlist-artist img, .flex-list-playlist-artist span{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.homepage{
+    width: 100%;
+    background: linear-gradient(to top, #121212  55%, rgb(33, 70, 191));
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container-icons-home{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.icon-home{
+    background-color:#121212;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.recents{
+    overflow: auto;
+    margin-bottom:15px;
+    padding-right: 15px;
+}
+
+.last-8 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-last-8{
+    height: 50px;
+    width: 22%;
+    background-color: rgb(68, 64, 89);
+    margin: 7px;
+    border-radius: 2px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    display: inline-block;
+}
+
+.item-last-8 span, .item-last-8 img{
+    vertical-align: middle;
+}
+
+.item-last-8:hover, .item-made-for-you:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.made-for-you, .new-releases {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+.hidden{
+    display: none;
+}
+
+.item-made-for-you{
+    height: auto;
+    width: 18%;
+    padding: 0px;
+    display: inline;
+    font-size:14px;
+    margin-right: 18px;
+    padding-bottom: 25px;
+}
+
+.item-made-for-you strong{
+    font-size: 20px;
+}
+
+.img-list-dmix {
+    width: 150px;
+    height: 150px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.flex-showall {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+}
+
+.flex-showall span{
+    align-self: center;
+}
+
+.flex-showall strong{
+    font-size: 25px;
+}
+
+.play {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 10px;
+}
+
+.play div{
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.flex-reproduction{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icon-play{
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+}
+
+.icon-buttons{
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+}
+
+.flex-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-input-dx{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.reproduction, .volume{
+    background: linear-gradient(to right, white 50%, gray 50%);
+    border-radius: 10px;
+    height: 5px;
+    width: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.volume {
+    width: 100px;
+}
+
+.reproduction:hover, .volume:hover{
+    background: rgb(30, 215, 96);
+}
+
+form{
+    padding-top: 7px;
+}
+
+#submit{
+    display: none;
+}

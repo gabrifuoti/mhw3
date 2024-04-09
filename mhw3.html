@@ -1,0 +1,668 @@
+<html>
+
+<head>
+    <title>Spotify 2.0 • Gabriele Fuoti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/logo.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Shippori Mincho" rel="stylesheet">
+    <link href="css/mhw3.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <script src="js/mhw2.js" defer></script>
+    <script src="js/mhw3.js" defer></script>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="flex-left">
+
+            <div class="home-search">
+                <a class="link" href="#">
+                    <div class="flex-home">
+                        <span>
+                            <!-- Home -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                            </svg>
+                            <strong>Home</strong>
+                        </span>
+                    </div>
+                </a>
+                <a class="link" href="#">
+                    <div class="flex-search">
+                        <span>
+                            <!-- Search -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                            Search
+                        </span>
+                        <form id="search-form" class="hidden">
+                            <input type='text' id='search-album' placeholder="Search for an album" autocomplete="off">
+                            <input type='submit' id='submit'>
+                        </form>
+                    </div>
+                </a>
+            </div>
+
+            <div class="library">
+                <div class="flex-library">
+                    <span>
+                        <a class="link" href="#">
+                            <!-- Library -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon">
+                                <path
+                                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 
+                                    14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
+                                </path>
+                            </svg>
+                            Your Library
+                        </a>
+                    </span>
+                    <span>
+                        <!-- Plus New Playlist -->
+                        <a class="link container" href="#" id="create-new-playlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-dx"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                            </svg>
+                            <div class="overlay">Create new playlist</div>
+                        </a>
+                        <!-- Arrow For Expand -->
+                        <a class="link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-dx"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+
+                <nav>
+                    <div>
+                        <a href="#" class="button-playlist-artist">Playlists</a>
+                        <a href="#" class="button-playlist-artist">Artists</a>
+                    </div>
+                </nav>
+                <div class="flex-search-library">
+                    <a class="link" href="#">
+                        <div class="flex-search">
+                            <!-- Search -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </div>
+                    </a>
+                    <span>
+                        <a class="link" href="#">
+                            Recents
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-dx"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+
+                <div id="playlist-list" class="flex-list-playlist-artist">
+                    <div>
+                        <a class="link-list" href="#">
+                            <img class="img-list-playlist" src="images/playlist1.png">
+                            <span>
+                                <strong> Liked Songs </strong><br>
+                                Playlist • 105 songs
+                            </span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="link-list" href="#">
+                            <img class="img-list-playlist" src="images/playlist2.png">
+                            <span>
+                                <strong> This is Travis Scott </strong><br>
+                                Playlist • 100 songs
+                            </span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="link-list" href="#">
+                            <img class="img-list-artist" src="images/playlist3.png">
+
+                            <span>
+                                <strong> 21 Savage </strong><br>
+                                Artist
+                            </span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="link-list" href="#">
+                            <img class="img-list-playlist" src="images/playlist4.png">
+                            <span>
+                                <strong> Love You </strong><br>
+                                Playlist • 153 songs
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex-right">
+            <div class="homepage">
+
+                <div class="container-icons-home">
+                    <span>
+                        <a class="link-list" id="arrow-left" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-home"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </a>
+                        <a class="link-list" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-home"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="link-list container" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-home"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                            </svg>
+                            <div class="overlay">What's new</div>
+                        </a>
+                        <a class="link-list container" href="#">
+                            <img class="icon-home" src="images/profile.png">
+                            <div class="overlay">Account</div>
+                        </a>
+                    </span>
+                </div>
+
+                <div class="hidden" id="hidden1">
+                    <div class="flex-showall">
+                        <span>
+                            <a class="link-list" href="#">
+                                <strong>
+                                    Made For Gabriele Fuoti
+                                </strong>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="made-for-you">
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/dmix1.png">
+                            <span>
+                                <strong> Daily Mix 1 </strong><br>
+                                Travis Scott, 21 Savage, Mac Miller and more
+
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/dmix2.png">
+                            <span>
+                                <strong> Daily Mix 2 </strong><br>
+                                Gemitaiz, Blanco, Kid Yugi and more
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/dmix3.png">
+                            <span>
+                                <strong> Daily Mix 3 </strong><br>
+                                Gazzelle, Mahmood, sangiovanni and more
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/dmix4.png">
+                            <span>
+                                <strong> Daily Mix 4 </strong><br>
+                                Post Malone, Juice WRLD, Lyrical Lemonade and more
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/dmix5.png">
+                            <span>
+                                <strong> Daily Mix 5 </strong><br>
+                                Twentyone Pilots, Lana del Rey, Coldplay and more
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/dmix6.png">
+                            <span>
+                                <strong> Daily Mix 6 </strong><br>
+                                Drake, Tyla, SZA and more
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden" id="hidden2">
+                    <div class="flex-showall">
+                        <span>
+                            <a class="link-list" href="#">
+                                <strong>
+                                    New releases for you
+                                </strong>
+
+                            </a>
+                        </span>
+                    </div>
+                    <div class="new-releases">
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/new1.png">
+                            <span>
+                                <strong> RADIO SAKURA </strong>
+                            </span>
+                            <br>
+                            <span>
+                                Rose Villain
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/new2.png">
+                            <span>
+                                <strong> IL CORAGGIO DEI BAMBINI </strong>
+                            </span>
+                            <br>
+                            <span>
+                                Geolier
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/new3.png">
+                            <span>
+                                <strong> I Nomi del Diavolo </strong>
+                            </span>
+                            <br>
+                            <span>
+                                Kid Yugi
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/new4.png">
+                            <span>
+                                <strong> JACKBOYS </strong>
+                            </span>
+                            <br>
+                            <span>
+                                JACKBOYS
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/new5.png">
+                            <span>
+                                <strong> For All The Dogs </strong>
+                            </span>
+                            <br>
+                            <span>
+                                Drake
+                            </span>
+                        </div>
+                        <div class="item-made-for-you">
+                            <img class="img-list-dmix" src="images/new6.png">
+                            <span>
+                                <strong> WE DON'T TRUST YOU </strong>
+                            </span>
+                            <br>
+                            <span>
+                                Future, Metro Boomin
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="result" class="hidden">
+                    <span>
+                        <a class="link-list" href="#">
+                            <strong>
+                                Top Result
+                            </strong>
+                        </a>
+                    </span>
+                    <div id="search-result" class="new-releases hidden"></div>
+                </div>
+
+
+                <div class="homepage-to-hidden">
+                    <div>
+                        <nav>
+                            <a href="#" class="button-playlist-artist-current">All</a>
+                            <a href="#" class="button-playlist-artist">Music</a>
+                            <a href="#" class="button-playlist-artist">Podcasts</a>
+                        </nav>
+                    </div>
+                    <div class="recents">
+                        <div class="last-8">
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist2.png">
+                                <span>
+                                    <strong> Travis Scott </strong>
+                                </span>
+                            </div>
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist1.png">
+                                <span>
+                                    <strong> Liked Songs </strong>
+                                </span>
+                            </div>
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist5.png">
+                                <span>
+                                    <strong> This is Annalisa </strong>
+                                </span>
+                            </div>
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist3.png">
+                                <span>
+                                    <strong> 21 Savage </strong>
+                                </span>
+                            </div>
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist6.png">
+                                <span>
+                                    <strong> Astroworld </strong>
+                                </span>
+                            </div>
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist7.png">
+                                <span>
+                                    <strong> Graduation </strong>
+                                </span>
+                            </div>
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist4.png">
+                                <span>
+                                    <strong> Love You </strong>
+                                </span>
+                            </div>
+                            <div class="item-last-8">
+                                <img class="img-list-playlist" src="images/playlist8.png">
+                                <span>
+                                    <strong> Drake </strong>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex-showall">
+                            <span>
+                                <a class="link-list" href="#">
+                                    <strong>
+                                        Made For Gabriele Fuoti
+                                    </strong>
+
+                                </a>
+                            </span>
+                            <span>
+                                <a class="link-list showall" id="showall1" href="#">
+                                    Show all
+                                </a>
+                            </span>
+                        </div>
+                        <div class="made-for-you">
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/dmix1.png">
+                                <span>
+                                    <strong> Daily Mix 1 </strong><br>
+                                    Travis Scott, 21 Savage, Mac Miller and more
+
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/dmix2.png">
+                                <span>
+                                    <strong> Daily Mix 2 </strong><br>
+                                    Gemitaiz, Blanco, Kid Yugi and more
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/dmix3.png">
+                                <span>
+                                    <strong> Daily Mix 3 </strong><br>
+                                    Gazzelle, Mahmood, sangiovanni and more
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/dmix4.png">
+                                <span>
+                                    <strong> Daily Mix 4 </strong><br>
+                                    Post Malone, Juice WRLD, Lyrical Lemonade and more
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/dmix5.png">
+                                <span>
+                                    <strong> Daily Mix 5 </strong><br>
+                                    Twentyone Pilots, Lana del Rey, Coldplay and more
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex-showall">
+                            <span>
+                                <a class="link-list" href="#">
+                                    <strong>
+                                        New releases for you
+                                    </strong>
+
+                                </a>
+                            </span>
+                            <span>
+                                <a class="link-list showall" id="showall2" href="#">
+                                    Show all
+                                </a>
+                            </span>
+                        </div>
+                        <div class="new-releases">
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/new1.png">
+                                <span>
+                                    <strong> RADIO SAKURA </strong>
+                                </span>
+                                <br>
+                                <span>
+                                    Rose Villain
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/new2.png">
+                                <span>
+                                    <strong> IL CORAGGIO DEI BAMBINI </strong>
+                                </span>
+                                <br>
+                                <span>
+                                    Geolier
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/new3.png">
+                                <span>
+                                    <strong> I Nomi del Diavolo </strong>
+                                </span>
+                                <br>
+                                <span>
+                                    Kid Yugi
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/new4.png">
+                                <span>
+                                    <strong> JACKBOYS </strong>
+                                </span>
+                                <br>
+                                <span>
+                                    JACKBOYS
+                                </span>
+                            </div>
+                            <div class="item-made-for-you">
+                                <img class="img-list-dmix" src="images/new5.png">
+                                <span>
+                                    <strong> For All The Dogs </strong>
+                                </span>
+                                <br>
+                                <span>
+                                    Drake
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="play">
+        <div class="flex-list-playlist-artist">
+            <a class="link-list" href="#">
+                <img class="img-list-playlist" src="images/playlist6.png">
+                <span>
+                    <strong> BUTTERFLY EFFECT </strong><br>
+                    Travis Scott
+                </span>
+                <!-- Song Check -->
+                <svg xmlns="http://www.w3.org/2000/svg" color="green" fill="currentColor" class="icon-dx"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+            </a>
+        </div>
+        <div class="reproduction-buttons flex-reproduction">
+            <div>
+                <!-- Random -->
+                <a class="link-list" href="#">
+                    <svg color="green" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-play"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
+                        <path
+                            d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
+                    </svg>
+                </a>
+                <!-- Play Left -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-play" viewBox="0 0 16 16">
+                        <path
+                            d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z" />
+                    </svg>
+                </a>
+                <!-- Play/Pause -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-play" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+                    </svg>
+                </a>
+                <!-- Play Right -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-play" viewBox="0 0 16 16">
+                        <path
+                            d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z" />
+                    </svg>
+                </a>
+                <!-- Loop -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-play" viewBox="0 0 16 16">
+                        <path
+                            d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="flex-input">
+                <span> 1:35 </span>
+                <div class="reproduction"></div>
+                <span> 3:10 </span>
+            </div>
+        </div>
+
+        <div class="reproduction-buttons flex-reproduction">
+            <div class="flex-input-dx">
+                <!-- Play video -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-buttons"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M6 10.117V5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43z" />
+                        <path
+                            d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1" />
+                    </svg>
+                </a>
+                <!-- Microphone -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-buttons"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M13.426 2.574a2.831 2.831 0 0 0-4.797 1.55l3.247 3.247a2.831 2.831 0 0 0 1.55-4.797zM10.5 8.118l-2.619-2.62A63303.13 63303.13 0 0 0 4.74 9.075L2.065 12.12a1.287 1.287 0 0 0 1.816 1.816l3.06-2.688 3.56-3.129zM7.12 4.094a4.331 4.331 0 1 1 4.786 4.786l-3.974 3.493-3.06 2.689a2.787 2.787 0 0 1-3.933-3.933l2.676-3.045 3.505-3.99z">
+                        </path>
+                    </svg>
+                </a>
+                <!-- Queue -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-buttons"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z">
+                        </path>
+                    </svg>
+                </a>
+                <!-- Display -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-buttons"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z" />
+                    </svg>
+                </a>
+                <!-- Volume -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-buttons"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z" />
+                        <path
+                            d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z" />
+                        <path
+                            d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06" />
+                    </svg>
+                </a>
+                <a class="link-list" href="#">
+                    <div class="volume"></div>
+                </a>
+                <!-- Mini Player -->
+                <a class="link-list" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-buttons"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M16 2.45c0-.8-.65-1.45-1.45-1.45H1.45C.65 1 0 1.65 0 2.45v11.1C0 14.35.65 15 1.45 15h5.557v-1.5H1.5v-11h13V7H16V2.45z">
+                        </path>
+                        <path
+                            d="M15.25 9.007a.75.75 0 0 1 .75.75v4.493a.75.75 0 0 1-.75.75H9.325a.75.75 0 0 1-.75-.75V9.757a.75.75 0 0 1 .75-.75h5.925z">
+                        </path>
+                    </svg>
+                </a>
+                <!-- Fullscreen -->
+                <a class="link-list" id="full-screen" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-buttons"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
