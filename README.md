@@ -18,3 +18,4 @@ I used Spotify's API for searching of an album by input text.
 |-|-|
 | css | css' files for the Spotify's home page |
 | images | all the images used for the playlists |
+| js | js' files used for the function |
