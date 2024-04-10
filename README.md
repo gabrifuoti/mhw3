@@ -11,7 +11,8 @@ I used JS for this functions:
 3. Create New Playlist button
 4. Get Back button
 
-I used Spotify's API for searching of an album by input text.
+# API
+I used Spotify's API for searching of an album by input text and Ticketmaster's API for searching event
 
 # Folders Guide
 | Folder | Description |
