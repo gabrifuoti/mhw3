@@ -1,0 +1,70 @@
+@media (max-width: 500px) {
+    
+    html{
+        font-size: 10px;
+    }
+
+    .flex{
+        flex-direction: column;
+        width:90%;
+    }
+
+    .flex-left{
+        order: 2; /*il div a sx nel mobile deve stare sotto e se non mettevo order sarebbe stato sopra*/
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flex-right{
+        order: 1;
+        width: 95%;
+        height: 95%;
+    }
+
+    .library{
+        display: none;
+    }
+
+    .home-search{
+        flex-direction: row;
+        position: fixed;
+        bottom:0px;
+        margin-bottom: 0px;
+        height: auto;
+        width: 90%;
+    }
+
+    .homepage{
+        width: 95%;
+    }
+
+    .item-last-8{
+        width: 100%;
+    }
+
+    .showall{
+        display: none;
+    }
+
+    .item-made-for-you{
+        width: auto;
+    }
+
+    .play{
+        position: fixed;
+        bottom: 80px;
+        width: 100%;
+        margin-left: 0px;
+        height: auto;
+        background-color: #414141;
+    }
+
+    .reproduction-buttons{
+        display: none;
+    }
+
+    .show-play-buttons{
+        display: block;
+    }
+}

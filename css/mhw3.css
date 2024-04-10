@@ -367,6 +367,26 @@ form{
     padding-top: 7px;
 }
 
-#submit{
-    display: none;
+input[type="text"]{
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    width: 200px;
+}
+
+input::placeholder{
+    color: #fff;
+    opacity: 0.7;
+}
+
+.flex-social{
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: middle;
+}
+
+.flex-social .link-list{
+    margin-left: 15px;
 }
